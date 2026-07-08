@@ -1,0 +1,143 @@
+<div class="page-wrapper">
+
+  @if (!selectedBox) {
+    <div class="bento-grid">
+
+      <button class="pastel-box" (click)="openBox('about')">
+        <div class="box-title">About Me</div>
+        <div class="box-text">Victoria Lagrange<br>Software Engineer</div>
+      </button>
+
+      <button class="pastel-box" (click)="openBox('frontend')">
+        <div class="box-title">Front-End & UI</div>
+        <div class="box-text">TypeScript, Angular<br><br><em>Accessibility & Performance</em></div>
+      </button>
+
+      <button class="pastel-box" (click)="openBox('backend')">
+        <div class="box-title">Back-End & Tools</div>
+        <div class="box-text">Java, Spring Boot, Python, SQL<br><br><em>API & Data Modeling</em></div>
+      </button>
+
+      <button class="pastel-box" (click)="openBox('experience')">
+        <div class="box-title">Work Experience</div>
+        <div class="box-text">CGI & LIG<br><br><em>Full-Stack Software Engineer</em></div>
+      </button>
+
+      <button class="pastel-box" (click)="openBox('education')">
+        <div class="box-title">Education</div>
+        <div class="box-text">Master's & Bachelor's<br><br><em>Computer Science</em></div>
+      </button>
+
+      <button class="pastel-box" (click)="openBox('expertise')">
+        <div class="box-title">Engineering Approach</div>
+        <div class="box-text">Agile Execution<br><br><em>Architecture & Polish</em></div>
+      </button>
+
+    </div>
+  }
+
+
+  @if (selectedBox) {
+    <div class="detail-container">
+
+      <!-- The Go Back Button -->
+      <button class="back-btn" (click)="closeBox()">
+        ← Back to Grid
+      </button>
+
+      <div class="detail-box">
+
+        @if (selectedBox === 'about') {
+          <div class="detail-title">About Me</div>
+          <div class="box-text">
+            <p><strong>Victoria Lagrange | Software Engineer | Front-End & Full-Stack Web Platforms</strong></p>
+            <br>
+            <p>Computer Science Master's graduate with a strong product mindset and a passion for building highly responsive, polished, and reliable front-end experiences. Proven track record in translating complex application requirements and legacy systems into clean, well-tested, and performant web interfaces. Experienced working in collaborative Agile team environments with continuous integration pipelines.</p>
+            <br>
+            <p><strong>Contact Info:</strong><br>
+              Email:<a href="mailto:victorial65@outlook.fr" class="text-white hover:underline">victorial65&#64;outlook.fr</a><br></p>
+          </div>
+        }
+
+        @if (selectedBox === 'frontend') {
+          <div class="detail-title">Front-End & UI</div>
+          <div class="box-text">
+            <p><strong>Programming Languages:</strong> TypeScript, React (Ramping Up)</p>
+            <br>
+            <p><strong>Core Expertise:</strong></p>
+            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+              <li>Modern Web App Architecture</li>
+              <li>High-Performance State Management</li>
+              <li>Defensive UI & Error Handling</li>
+              <li>Accessibility Standards (WCAG/DSFR)</li>
+            </ul>
+          </div>
+        }
+
+        @if (selectedBox === 'backend') {
+          <div class="detail-title">Back-End & Tools</div>
+          <div class="box-text">
+            <p><strong>Programming Languages:</strong> SQL, Java, Python, C, OCaml</p>
+            <br>
+            <p><strong>Tools & DevOps:</strong></p>
+            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+              <li>Git, PostgreSQL, Docker, Podman, SonarQube, Linux</li>
+              <li>Postman, Jest, Keycloak, Maven, Spring Boot</li>
+            </ul>
+            <br>
+            <p><strong>Core Expertise:</strong> API Consumption & Data Modeling</p>
+          </div>
+        }
+
+        @if (selectedBox === 'experience') {
+          <div class="detail-title">Work Experience</div>
+          <div class="box-text">
+            <p><strong>CGI | Full-Stack Software Engineer Intern</strong><br><em>Apr 2026 - Sep 2026 | Montpellier, France</em></p>
+            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+              <li>Transformed a critical, complex legacy system into a polished, high-performance modern web application built on an Angular/TypeScript front-end and a secure Java API backend.</li>
+              <li>Re-engineered client-side state management using modern reactive architectures (Angular Signals API) to drastically reduce lag and optimize real-time data rendering.</li>
+              <li>Connected heavy client-side applications with complex JSON/REST APIs, implementing robust data mapping, validation layers, pagination, and strict error-handling workflows.</li>
+            </ul>
+            <br>
+            <p><strong>LIG | Software Engineer Intern</strong><br><em>May 2025 - Jun 2025 | Grenoble, France</em></p>
+            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+              <li>Conceived and optimized data structures to process, filter, and correctly model large-scale complex textual data payloads.</li>
+              <li>Championed thorough testing methodologies and clean architectural design patterns to guarantee long-term application maintainability and minimize runtime bugs.</li>
+            </ul>
+          </div>
+        }
+
+        @if (selectedBox === 'education') {
+          <div class="detail-title">Education</div>
+          <div class="box-text">
+            <p><strong>Master's Degree in Computer Science</strong><br><em>University of Grenoble | Sep 2024 - Aug 2026</em></p>
+            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+              <li>Graduated with honors (14/20 - Equivalent to a 3.6 US GPA).</li>
+              <li>Advanced Traces: Distributed Systems (High Availability), Advanced Database Systems, Compilers, and Cryptography.</li>
+            </ul>
+            <br>
+            <p><strong>Bachelor's Degree in Computer Science</strong><br><em>University of Grenoble | Sep 2021 - Jun 2024</em></p>
+            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+              <li>Deep foundation in Object-Oriented Programming (OOP), Data Structures, Frontend Best Practices, Algorithms, and Network Protocols.</li>
+            </ul>
+          </div>
+        }
+
+        @if (selectedBox === 'expertise') {
+          <div class="detail-title">Engineering Approach</div>
+          <div class="box-text">
+            <p><strong>Web Engineering & Agile Execution</strong></p>
+            <br>
+            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+              <li>Designed dynamic interfaces matching strict state tokens, ensuring absolute visual alignment, component reusability, and comprehensive accessibility (DSFR mapping directly to WCAG standards).</li>
+              <li>Maintained high team velocity within a fast-moving Scrum squad, communicating trade-offs between speed, quality, and technical debt while writing clean, testable code.</li>
+              <li>Authored comprehensive technical and internal tool documentation to support collaborative, seamless software development across international teams.</li>
+            </ul>
+          </div>
+        }
+
+      </div>
+    </div>
+  }
+
+</div>
