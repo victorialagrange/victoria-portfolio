@@ -17,15 +17,13 @@
         <div class="box-title">Back-End & Tools</div>
         <div class="box-text">Java, Spring Boot, Python, SQL<br><br><em>API & Data Modeling</em></div>
       </button>
-
-      <button class="pastel-box" (click)="openBox('experience')">
-        <div class="box-title">Work Experience</div>
-        <div class="box-text">CGI & LIG<br><br><em>Full-Stack Software Engineer</em></div>
+      <button class="pastel-box" (click)="openBox('testing')">
+        <div class="box-title">Testing & Quality</div>
+        <div class="box-text">JUnit, Mockito, Cucumber, Jest<br><br><em>TDD, BDD & Full-stack stability.</em></div>
       </button>
-
-      <button class="pastel-box" (click)="openBox('education')">
-        <div class="box-title">Education</div>
-        <div class="box-text">Master's & Bachelor's<br><br><em>Computer Science</em></div>
+      <button class="pastel-box" (click)="openBox('experience')">
+        <div class="box-title">Experience & Education</div>
+        <div class="box-text">CGI, LIG & Master's Degree<br><br><em>Enterprise architecture & academic excellence.</em></div>
       </button>
 
       <button class="pastel-box" (click)="openBox('expertise')">
@@ -90,9 +88,29 @@
             <p><strong>Core Expertise:</strong> API Consumption & Data Modeling</p>
             </div>
         }
+        @if (selectedBox === 'testing') {
+          <div class="detail-title">Testing & Quality Assurance</div>
+          <div class="box-text">
+            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem;">
+              <div>
+                <p><strong>Back-End (Java):</strong></p>
+                <p style="color: #b580c5; font-weight: 800;">JUnit, Mockito, Cucumber</p>
+              </div>
+              <div>
+                <p><strong>Front-End (Web):</strong></p>
+                <p style="color: #6b6b6b; font-weight: 800;">Jest, Selenium</p>
+              </div>
+            </div>
+
+            <p><strong>The Engineering Strategy:</strong><br>
+              I treat testing as a core architectural pillar, not an afterthought. For critical APIs and business logic, I utilize JUnit and Mockito to strictly isolate components, mock dependencies, and bulletproof edge cases.</p>
+            <br>
+            <p>Furthermore, I leverage Cucumber for Behavior-Driven Development (BDD). This allows me to bridge the gap between technical execution and product requirements, translating complex business rules into automated, living documentation that guarantees system reliability during live operations.</p>
+          </div>
+        }
 
         @if (selectedBox === 'experience') {
-          <div class="detail-title">Work Experience</div>
+          <div class="detail-title">Work Experience & Education </div>
           <div class="box-text">
             <p><strong>CGI | Full-Stack Software Engineer Intern</strong><br><em>Apr 2026 - Sep 2026 | Montpellier, France</em></p>
             <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
@@ -106,25 +124,14 @@
               <li>Conceived and optimized data structures to process, filter, and correctly model large-scale complex textual data payloads.</li>
               <li>Championed thorough testing methodologies and clean architectural design patterns to guarantee long-term application maintainability and minimize runtime bugs.</li>
             </ul>
+            <h3 style="color: #4a4a4a; font-weight: 800; font-size: 1.2rem; margin-bottom: 0.5rem;">Education</h3>
+            <p><strong>Master’s Degree in Computer Science</strong></p>
+            <p style="margin-bottom: 1.5rem;">University of Grenoble | Graduated with Honors (14/20 — UK 2:1 Equivalent)<br><em>Specialization: Distributed Systems, Advanced Database Management, Compilers, Cryptography</em></p>
+
+            <p><strong>Bachelor’s Degree in Computer Science</strong></p>
+            <p>University of Grenoble | Core foundations in OOP, Data Structures, Algorithms, and Network Protocols.</p>
           </div>
         }
-
-        @if (selectedBox === 'education') {
-          <div class="detail-title">Education</div>
-          <div class="box-text">
-            <p><strong>Master's Degree in Computer Science</strong><br><em>University of Grenoble | Sep 2024 - Aug 2026</em></p>
-            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
-              <li>Graduated with honors (14/20 - Equivalent to a 3.6 US GPA).</li>
-              <li>Advanced Traces: Distributed Systems (High Availability), Advanced Database Systems, Compilers, and Cryptography.</li>
-            </ul>
-            <br>
-            <p><strong>Bachelor's Degree in Computer Science</strong><br><em>University of Grenoble | Sep 2021 - Jun 2024</em></p>
-            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
-              <li>Deep foundation in Object-Oriented Programming (OOP), Data Structures, Frontend Best Practices, Algorithms, and Network Protocols.</li>
-            </ul>
-          </div>
-        }
-
         @if (selectedBox === 'expertise') {
           <div class="detail-title">Engineering Approach</div>
           <div class="box-text">
@@ -136,6 +143,11 @@
               <li>Authored comprehensive technical and internal tool documentation to support collaborative, seamless software development across international teams.</li>
               <li>Engineered this website with a focus on performance and accessibility: it achieves a perfect Google Lighthouse audit.</li>
             </ul>
+            <h3 style="color: #4a4a4a; font-weight: 800; font-size: 1.2rem; margin-bottom: 0.5rem;">AI-Driven Development Manifesto</h3>
+            <p style="margin-top: 1rem;"> I embrace AI-assisted workflows as a catalyst for velocity and engineering quality rather than a replacement for fundamentals.
+             I use LLMs such a Copilot and Claude Code to safely accelerate data models and type definitions based on system requirements and prompt AI to safely map boilerplates for unit tests, allowing more focus on logical boundary conditions.
+            I also use it to evaluate alternative algorithm strategies for performance optimization.</p>
+
           </div>
         }
 
