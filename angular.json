@@ -7,6 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
+
     "victoria-portfolio": {
       "projectType": "application",
       "schematics": {},
@@ -29,6 +30,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/victoria-portfolio/",
               "budgets": [
                 {
                   "type": "initial",

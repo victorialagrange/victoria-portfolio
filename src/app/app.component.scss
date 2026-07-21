@@ -4,7 +4,7 @@ $bg: #ffffff;
 $bg-soft: #f7f7fb;
 $ink: #0b0b0f;
 $ink-muted: #55565f;
-$ink-faint: #8b8c96;
+$ink-faint: #6e6f7a;
 $line: #e7e7ee;
 $accent: #3d2fe0;
 $accent-soft: #eeecfd;
@@ -39,6 +39,7 @@ $font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
   margin-bottom: 0.9rem;
 }
 
+/* --- Nav --- */
 .site-nav {
   position: sticky;
   top: 0;
@@ -447,6 +448,7 @@ ul {
   margin: 0;
 }
 
+/* --- Engineering approach list --- */
 .approach-list {
   margin-bottom: 2rem;
 
