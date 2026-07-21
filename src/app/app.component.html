@@ -1,158 +1,252 @@
-<main class="page-wrapper">
+<div class="page">
 
-  @if (!selectedBox) {
-    <div class="bento-grid">
-
-      <button class="pastel-box" (click)="openBox('about')">
-        <div class="box-title">About Me</div>
-        <div class="box-text">Victoria Lagrange<br>Software Engineer</div>
-      </button>
-
-      <button class="pastel-box" (click)="openBox('frontend')">
-        <div class="box-title">Front-End & UI</div>
-        <div class="box-text">TypeScript, Angular<br><br><em>Accessibility & Performance</em></div>
-      </button>
-
-      <button class="pastel-box" (click)="openBox('backend')">
-        <div class="box-title">Back-End & Tools</div>
-        <div class="box-text">Java, Spring Boot, Python, SQL<br><br><em>API & Data Modeling</em></div>
-      </button>
-      <button class="pastel-box" (click)="openBox('testing')">
-        <div class="box-title">Testing & Quality</div>
-        <div class="box-text">JUnit, Mockito, Cucumber, Jest<br><br><em>TDD, BDD & Full-stack stability.</em></div>
-      </button>
-      <button class="pastel-box" (click)="openBox('experience')">
-        <div class="box-title">Experience & Education</div>
-        <div class="box-text">CGI, LIG & Master's Degree<br><br><em>Enterprise architecture & academic excellence.</em></div>
-      </button>
-
-      <button class="pastel-box" (click)="openBox('expertise')">
-        <div class="box-title">Engineering Approach</div>
-        <div class="box-text">Agile Execution<br><br><em>Architecture & Polish</em></div>
-      </button>
-
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo">VL<span class="logo-dot">.</span></a>
+      <nav class="nav-links">
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+      </nav>
+      <a href="mailto:victorial65@outlook.fr" class="nav-cta">Get in Touch</a>
     </div>
-  }
+  </header>
 
+  <main class="portfolio-container" id="top">
 
-  @if (selectedBox) {
-    <div class="detail-container">
+    <header class="hero-section">
+      <span class="eyebrow">// Full&#8209;Stack Engineering · Montpellier, France</span>
+      <h1 class="name">Victoria Lagrange</h1>
+      <h2 class="title">Software Engineer</h2>
+      <p class="summary">
+        Front-End & Full-Stack Web Platforms. Computer Science Master's graduate with a strong product mindset and a passion for building highly responsive, polished, and reliable front-end experiences. Proven track record in translating complex application requirements and legacy systems into clean, well-tested, and performant web interfaces.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:victorial65@outlook.fr" class="btn-primary">Email Me</a>
+        <a href="/2248-solver/" target="_blank" class="btn-secondary">View Project: 2248 AI Solver</a>
+      </div>
+    </header>
 
-      <!-- The Go Back Button -->
-      <button class="back-btn" (click)="closeBox()">
-        ← Back to Grid
-      </button>
+    <section class="content-section stats-section">
+      <span class="eyebrow">// Track Record</span>
+      <h3 class="section-heading">Results That Hold Up</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">100</span>
+          <span class="stat-label">Google Lighthouse performance score</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">14/20</span>
+          <span class="stat-label">Master's Degree, graduated with honors</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">2</span>
+          <span class="stat-label">Software engineering internships</span>
+        </div>
+      </div>
+    </section>
 
-      <div class="detail-box">
+    <section class="content-section" id="expertise">
+      <span class="eyebrow">// What I Do</span>
+      <h3 class="section-heading">Core Expertise</h3>
 
-        @if (selectedBox === 'about') {
-          <div class="detail-title">About Me</div>
-          <div class="box-text">
-            <p><strong>Victoria Lagrange | Software Engineer | Front-End & Full-Stack Web Platforms</strong></p>
-            <br>
-            <p>Computer Science Master's graduate with a strong product mindset and a passion for building highly responsive, polished, and reliable front-end experiences. Proven track record in translating complex application requirements and legacy systems into clean, well-tested, and performant web interfaces. Experienced working in collaborative Agile team environments with continuous integration pipelines.</p>
-            <br>
-            <p> Strong foundation in system design, UML, and front-to-back architecture mapping. </p>
-            <br>
-            <p><strong>Contact Info:</strong><br>
-              Email:<a href="mailto:victorial65@outlook.fr" class="text-white hover:underline">victorial65&#64;outlook.fr</a><br></p>
+      <div class="grid-layout">
+        <article class="skill-block">
+          <h4>Front-End & UI</h4>
+          <div class="tech-tags">
+            <span>TypeScript</span>
+            <span>Angular</span>
+            <span>React</span>
           </div>
-        }
+          <ul>
+            <li>Modern Web App Architecture & State Management</li>
+            <li>Defensive UI, Error Handling & WCAG/DSFR Accessibility</li>
+          </ul>
+        </article>
 
-        @if (selectedBox === 'frontend') {
-          <div class="detail-title">Front-End & UI</div>
-          <div class="box-text">
-            <p><strong>Programming Languages:</strong> TypeScript, React (Ramping Up)</p>
-            <br>
-            <p><strong>Core Expertise:</strong></p>
-            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
-              <li>Modern Web App Architecture</li>
-              <li>High-Performance State Management</li>
-              <li>Defensive UI & Error Handling</li>
-              <li>Accessibility Standards (WCAG/DSFR)</li>
-            </ul>
+        <article class="skill-block">
+          <h4>Back-End & Tools</h4>
+          <div class="tech-tags">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>Python</span>
+            <span>SQL</span>
           </div>
-        }
+          <ul>
+            <li>API Consumption & Complex Data Modeling</li>
+            <li>Docker, Podman, SonarQube, Keycloak, PostgreSQL</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-        @if (selectedBox === 'backend') {
-          <div class="detail-title">Back-End & Tools</div>
-          <div class="box-text">
-            <p><strong>Programming Languages:</strong> SQL, Java, Python, C, OCaml</p>
-            <br>
-            <p><strong>Tools & DevOps:</strong></p>
-            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
-              <li>Git, PostgreSQL, Docker, Podman, SonarQube, Linux</li>
-              <li>Postman, Jest, Keycloak, Maven, Spring Boot</li>
-            </ul>
-            <br>
-            <p><strong>Core Expertise:</strong> API Consumption & Data Modeling</p>
+    <section class="content-section" id="projects">
+      <span class="eyebrow">// Things I've Built</span>
+      <h3 class="section-heading">Personal Projects</h3>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <span class="project-index">01</span>
+          <h4>2248 AI Solver</h4>
+          <p>
+            An AI-driven solver for the 2248 tile-merging puzzle game, built to analyze board states and compute optimal merge sequences in real time.
+          </p>
+          <div class="tech-tags">
+            <span>TypeScript</span>
+            <span>Algorithms</span>
+            <span>Heuristics</span>
+          </div>
+          <a href="/2248-solver/" target="_blank" class="project-link">View Project →</a>
+        </article>
+
+        <article class="project-card">
+          <span class="project-index">02</span>
+          <h4>TFT Shop Simulator</h4>
+          <p>
+            A shop simulator for Teamfight Tactics rolldowns, modeling shop odds and champion pool depletion to estimate the likelihood of hitting key units across a given gold budget. Uses the community-run API Community Dragon.
+          </p>
+          <div class="tech-tags">
+            <span>Java</span>
+            <span>Springboot</span>
+            <span>Simulation</span>
+          </div>
+          <a target="_blank" class="project-link">En cours</a>
+
+        </article>
+
+        <article class="project-card">
+          <span class="project-index">03</span>
+          <h4>Space Invaders (Embedded, C)</h4>
+          <p>
+            A Space Invaders-style game written in bare-metal C, cross-compiled and run inside a QEMU-emulated console for an IoT target, driving rendering and input directly against emulated hardware.
+          </p>
+          <div class="tech-tags">
+            <span>C</span>
+            <span>QEMU</span>
+            <span>Embedded / IoT</span>
+          </div>
+          <a href="https://github.com/victorialagrange/IoT/blob/main/worklog/worklog.md" target="_blank" class="project-link">View Project worklog →</a>
+          <a href="https://github.com/victorialagrange/IoT/blob/main/README.md" target="_blank" class="project-link">View Project ReadMe/running instructions →</a>
+
+
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="eyebrow">// Quality Assurance</span>
+      <h3 class="section-heading">Testing & Quality</h3>
+      <div class="text-card">
+        <p class="text-block">
+          I treat testing as a core architectural pillar, not an afterthought. For critical APIs and business logic, I utilize <strong>JUnit and Mockito</strong> to strictly isolate components, mock dependencies, and bulletproof edge cases.
+        </p>
+        <p class="text-block">
+          I leverage <strong>Cucumber for Behavior-Driven Development (BDD)</strong> to bridge the gap between technical execution and product requirements, translating complex business rules into automated, living documentation. On the front-end, I rely on <strong>Jest and Selenium</strong> to guarantee interface stability.
+        </p>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="content-section" id="experience">
+      <span class="eyebrow">// Where I've Worked</span>
+      <h3 class="section-heading">Work Experience</h3>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-index">01</span>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h4>Full-Stack Software Engineer Intern</h4>
+              <span class="company">CGI</span>
+              <span class="date">Apr 2026 - Sep 2026 | Montpellier, France</span>
             </div>
-        }
-        @if (selectedBox === 'testing') {
-          <div class="detail-title">Testing & Quality Assurance</div>
-          <div class="box-text">
-            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem;">
-              <div>
-                <p><strong>Back-End (Java):</strong></p>
-                <p style="color: #b580c5; font-weight: 800;">JUnit, Mockito, Cucumber</p>
-              </div>
-              <div>
-                <p><strong>Front-End (Web):</strong></p>
-                <p style="color: #6b6b6b; font-weight: 800;">Jest, Selenium</p>
-              </div>
-            </div>
-
-            <p><strong>The Engineering Strategy:</strong><br>
-              I treat testing as a core architectural pillar, not an afterthought. For critical APIs and business logic, I utilize JUnit and Mockito to strictly isolate components, mock dependencies, and bulletproof edge cases.</p>
-            <br>
-            <p>Furthermore, I leverage Cucumber for Behavior-Driven Development (BDD). This allows me to bridge the gap between technical execution and product requirements, translating complex business rules into automated, living documentation that guarantees system reliability during live operations.</p>
-          </div>
-        }
-
-        @if (selectedBox === 'experience') {
-          <div class="detail-title">Work Experience & Education </div>
-          <div class="box-text">
-            <p><strong>CGI | Full-Stack Software Engineer Intern</strong><br><em>Apr 2026 - Sep 2026 | Montpellier, France</em></p>
-            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+            <ul>
               <li>Transformed a critical, complex legacy system into a polished, high-performance modern web application built on an Angular/TypeScript front-end and a secure Java API backend.</li>
               <li>Re-engineered client-side state management using modern reactive architectures (Angular Signals API) to drastically reduce lag and optimize real-time data rendering.</li>
               <li>Connected heavy client-side applications with complex JSON/REST APIs, implementing robust data mapping, validation layers, pagination, and strict error-handling workflows.</li>
             </ul>
-            <br>
-            <p><strong>LIG | Software Engineer Intern</strong><br><em>May 2025 - Jun 2025 | Grenoble, France</em></p>
-            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-index">02</span>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h4>Software Engineer Intern</h4>
+              <span class="company">LIG</span>
+              <span class="date">May 2025 - Jun 2025 | Grenoble, France</span>
+            </div>
+            <ul>
               <li>Conceived and optimized data structures to process, filter, and correctly model large-scale complex textual data payloads.</li>
               <li>Championed thorough testing methodologies and clean architectural design patterns to guarantee long-term application maintainability and minimize runtime bugs.</li>
             </ul>
-            <h3 style="color: #4a4a4a; font-weight: 800; font-size: 1.2rem; margin-bottom: 0.5rem;">Education</h3>
-            <p><strong>Master’s Degree in Computer Science</strong></p>
-            <p style="margin-bottom: 1.5rem;">University of Grenoble | Graduated with Honors (14/20 — UK 2:1 Equivalent)<br><em>Specialization: Distributed Systems, Advanced Database Management, Compilers, Cryptography</em></p>
-
-            <p><strong>Bachelor’s Degree in Computer Science</strong></p>
-            <p>University of Grenoble | Core foundations in OOP, Data Structures, Algorithms, and Network Protocols.</p>
           </div>
-        }
-        @if (selectedBox === 'expertise') {
-          <div class="detail-title">Engineering Approach</div>
-          <div class="box-text">
-            <p><strong>Web Engineering & Agile Execution</strong></p>
-            <br>
-            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
-              <li>Designed dynamic interfaces matching strict state tokens, ensuring absolute visual alignment, component reusability, and comprehensive accessibility (DSFR mapping directly to WCAG standards).</li>
-              <li>Maintained high team velocity within a fast-moving Scrum squad, communicating trade-offs between speed, quality, and technical debt while writing clean, testable code.</li>
-              <li>Authored comprehensive technical and internal tool documentation to support collaborative, seamless software development across international teams.</li>
-              <li>Engineered this website with a focus on performance and accessibility: it achieves a perfect Google Lighthouse audit.</li>
-            </ul>
-            <h3 style="color: #4a4a4a; font-weight: 800; font-size: 1.2rem; margin-bottom: 0.5rem;">AI-Driven Development Manifesto</h3>
-            <p style="margin-top: 1rem;"> I embrace AI-assisted workflows as a catalyst for velocity and engineering quality rather than a replacement for fundamentals.
-             I use LLMs such a Copilot and Claude Code to safely accelerate data models and type definitions based on system requirements and prompt AI to safely map boilerplates for unit tests, allowing more focus on logical boundary conditions.
-            I also use it to evaluate alternative algorithm strategies for performance optimization.</p>
-
-          </div>
-        }
-
+        </div>
       </div>
-    </div>
-  }
+    </section>
 
-</main>
+    <!-- ENGINEERING APPROACH & AI -->
+    <section class="content-section">
+      <span class="eyebrow">// How I Build</span>
+      <h3 class="section-heading">Engineering Approach</h3>
+      <ul class="approach-list">
+        <li>Designed dynamic interfaces matching strict state tokens, ensuring absolute visual alignment, component reusability, and comprehensive accessibility.</li>
+        <li>Maintained high team velocity within a fast-moving Scrum squad, communicating trade-offs between speed, quality, and technical debt.</li>
+        <li>Engineered this website with a focus on performance and accessibility, achieving a perfect Google Lighthouse audit.</li>
+      </ul>
+
+      <div class="manifesto-box">
+        <span class="manifesto-mark">&ldquo;</span>
+        <h4>AI-Driven Development Manifesto</h4>
+        <p>
+          I embrace AI-assisted workflows as a catalyst for velocity and engineering quality rather than a replacement for fundamentals. I use LLMs such as Copilot and Claude Code to safely accelerate data models and type definitions based on system requirements, and prompt AI to map boilerplates for unit tests, allowing more focus on logical boundary conditions.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section" id="education">
+      <span class="eyebrow">// Academic Background</span>
+      <h3 class="section-heading">Education</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-index">01</span>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h4>Master&rsquo;s Degree in Computer Science</h4>
+              <span class="company">University of Grenoble</span>
+              <span class="date">Graduated with Honors (14/20 — UK 2:1 Equivalent)</span>
+            </div>
+            <p class="sub-text">Specialization: Distributed Systems, Advanced Database Management, Compilers, Cryptography</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-index">02</span>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h4>Bachelor&rsquo;s Degree in Computer Science</h4>
+              <span class="company">University of Grenoble</span>
+            </div>
+            <p class="sub-text">Core foundations in OOP, Data Structures, Algorithms, and Network Protocols.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-text">
+        <span class="eyebrow">// Get In Touch</span>
+        <h3>Let&rsquo;s build something reliable.</h3>
+      </div>
+      <a href="mailto:victorial65@outlook.fr" class="btn-primary">Email Me</a>
+    </div>
+    <div class="footer-meta">
+      <span>Victoria Lagrange — Software Engineer</span>
+      <span>victorial65&#64;outlook.fr</span>
+    </div>
+  </footer>
+
+</div>
